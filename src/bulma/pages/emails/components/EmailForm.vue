@@ -107,7 +107,7 @@ import { mapState } from 'vuex';
 import { EnsoDatepicker } from '@enso-ui/datepicker/bulma';
 import { EnsoSelect } from '@enso-ui/select/bulma';
 import { Action } from '@enso-ui/forms/bulma';
-import Errors from '@enso-ui/forms/errors';
+import Errors from '@enso-ui/laravel-validation';
 import Recipients from './Recipients.vue';
 import PrioritySelect from './PrioritySelect.vue';
 import SendToSelect from './SendToSelect.vue';
@@ -181,7 +181,7 @@ export default {
         appendParams() {
             const skip = ['errors', 'files'];
             this.cleanFields();
-            Object.keys(this.email).filter(key => !skip.includes(key))
+            Object.keys(this.email).filter((key) => !skip.includes(key))
                 .forEach((key) => {
                     if (Array.isArray(this.email[key])) {
                         this.appendArray(key, this.email[key]);

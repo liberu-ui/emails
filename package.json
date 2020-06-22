@@ -24,6 +24,7 @@
         "@enso-ui/datepicker": "1.1.x",
         "@enso-ui/dropdown": "1.0.x",
         "@enso-ui/forms": "1.4.x",
+        "@enso-ui/laravel-validation": "1.0.x",
         "@enso-ui/select": "1.2.x",
         "@enso-ui/tables": "1.4.x",
         "@enso-ui/ui": "2.5.x",
