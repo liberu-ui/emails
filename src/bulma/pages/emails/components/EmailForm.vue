@@ -117,7 +117,7 @@ import Error from './Error.vue';
 export default {
     name: 'EmailForm',
 
-    inject: ['errorHandler', 'i18n', 'route'],
+    inject: ['errorHandler', 'i18n', 'route', 'toastr'],
 
     components: {
         Error,
@@ -162,7 +162,7 @@ export default {
                 this.formData = new FormData();
                 this.files = [];
                 this.$emit('submit');
-                this.$toastr.success(data.message);
+                this.toastr.success(data.message);
                 if (redirect) {
                     this.$router.push({ name: redirect, params });
                 }
