@@ -1,5 +1,5 @@
 <template>
-    <div class="content has-text-danger has-padding-small">
+    <div class="content has-text-danger p-1">
         <span class="icon is-inline">
             <fa icon="exclamation"/>
         </span>

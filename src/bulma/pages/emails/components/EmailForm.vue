@@ -1,9 +1,9 @@
 <template>
     <div class="notification-form-wrapper box raises-on-hover has-background-light">
-        <recipients class="has-margin-bottom-large"
+        <recipients class="mb-3"
             :email="email"
             v-if="email.sendTo == enums.emailSendTo.Users"/>
-        <div class="has-margin-bottom-large"
+        <div class="mb-3"
             v-if="email.sendTo == enums.emailSendTo.Teams">
             <label class="label">
                 {{ i18n('Teams') }}
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="columns has-margin-bottom-medium">
+        <div class="columns mb-2">
             <div class="column is-8 has-text-left">
                 <label class="label">
                     {{ i18n('Schedule At') }}
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="has-margin-bottom-medium">
+        <div class="mb-2">
             <label class="label">
                 {{ i18n('Message') }}
             </label>
@@ -76,7 +76,7 @@
             <error :message="email.errors.get('body')"
                 v-if="email.errors.has('body')"/>
         </div>
-        <file-browser class="has-margin-bottom-large"
+        <file-browser class="mb-3"
             :email="email"/>
         <div class="level">
             <div class="level-right"/>
