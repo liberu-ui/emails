@@ -1,5 +1,5 @@
 <template>
-    <div class="file has-name is-info has-margin-top-medium">
+    <div class="file has-name is-info mt-2">
         <label class="file-label">
             <input class="file-input"
                 type="file"
