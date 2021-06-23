@@ -1,6 +1,6 @@
 {
     "name": "@enso-ui/emails",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Emails package",
     "main": "src/bulma/pages/emails/Index.vue",
     "scripts": {
