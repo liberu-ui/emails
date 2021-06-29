@@ -25,7 +25,7 @@ import { EnsoTable } from '@enso-ui/tables/bulma';
 export default {
     name: 'Index',
 
-    inject: ['errorHandler', 'i18n', 'route'],
+    inject: ['errorHandler', 'i18n', 'route', 'routeErrorHandler'],
 
     components: {
         EnsoTable,
@@ -44,7 +44,7 @@ export default {
             this.$router.push({
                 name: 'emails.edit',
                 params: { email: id },
-            });
+            }).catch(this.routeErrorHandler);
         },
     },
 };

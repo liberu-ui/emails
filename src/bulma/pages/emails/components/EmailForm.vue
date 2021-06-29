@@ -117,7 +117,7 @@ import Error from './Error.vue';
 export default {
     name: 'EmailForm',
 
-    inject: ['errorHandler', 'i18n', 'route', 'toastr'],
+    inject: ['errorHandler', 'i18n', 'route', 'routeErrorHandler', 'routeErrorHandler', 'toastr'],
 
     components: {
         Error,
@@ -164,9 +164,10 @@ export default {
                 this.$emit('submit');
                 this.toastr.success(data.message);
                 if (redirect) {
-                    this.$router.push({ name: redirect, params });
+                    this.$router.push({ name: redirect, params })
+                        .catch(this.routeErrorHandler);
                 }
-            }).catch((error) => {
+            }).catch(error => {
                 const { status, data } = error.response;
                 this.formData = new FormData();
                 if (status === 422) {
@@ -181,8 +182,8 @@ export default {
         appendParams() {
             const skip = ['errors', 'files'];
             this.cleanFields();
-            Object.keys(this.email).filter((key) => !skip.includes(key))
-                .forEach((key) => {
+            Object.keys(this.email).filter(key => !skip.includes(key))
+                .forEach(key => {
                     if (Array.isArray(this.email[key])) {
                         this.appendArray(key, this.email[key]);
                     } else {
@@ -212,7 +213,7 @@ export default {
             }
         },
         appendArray(key, array) {
-            array.forEach((id) => {
+            array.forEach(id => {
                 this.formData.append(`${key}[]`, id);
             });
         },
@@ -225,9 +226,8 @@ export default {
             this.formData = new FormData();
             this.fiels = [];
             this.$emit('cancel');
-            this.$router.push({
-                name: 'emails.index',
-            });
+            this.$router.push({ name: 'emails.index' })
+                .catch(this.routeErrorHandler);
         },
     },
 };
