@@ -117,7 +117,7 @@ import Error from './Error.vue';
 export default {
     name: 'EmailForm',
 
-    inject: ['errorHandler', 'i18n', 'route', 'routeErrorHandler', 'routeErrorHandler', 'toastr'],
+    inject: ['errorHandler', 'i18n', 'route', 'routerErrorHandler', 'routerErrorHandler', 'toastr'],
 
     components: {
         Error,
@@ -165,7 +165,7 @@ export default {
                 this.toastr.success(data.message);
                 if (redirect) {
                     this.$router.push({ name: redirect, params })
-                        .catch(this.routeErrorHandler);
+                        .catch(this.routerErrorHandler);
                 }
             }).catch(error => {
                 const { status, data } = error.response;
@@ -227,7 +227,7 @@ export default {
             this.fiels = [];
             this.$emit('cancel');
             this.$router.push({ name: 'emails.index' })
-                .catch(this.routeErrorHandler);
+                .catch(this.routerErrorHandler);
         },
     },
 };
