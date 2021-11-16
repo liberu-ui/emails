@@ -1,10 +1,10 @@
 <template>
     <dropdown class="status-selector"
         v-bind="$attrs">
-        <template v-slot:label>
+        <template #label>
             <send-to :send-to="value"/>
         </template>
-        <template v-slot:options>
+        <template #options>
             <a v-for="sendTo in enums.emailSendTo._keys()"
                 :key="sendTo"
                 class="dropdown-item"

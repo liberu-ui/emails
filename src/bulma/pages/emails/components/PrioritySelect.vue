@@ -1,10 +1,10 @@
 <template>
     <dropdown class="status-selector"
         v-bind="$attrs">
-        <template v-slot:label>
+        <template #label>
             <priority :priority="value"/>
         </template>
-        <template v-slot:options>
+        <template #options>
             <a v-for="priority in enums.emailPriorities._keys()"
                 :key="priority"
                 class="dropdown-item"

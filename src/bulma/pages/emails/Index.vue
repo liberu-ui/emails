@@ -2,13 +2,13 @@
     <enso-table class="box is-paddingless raises-on-hover"
         id="emails"
         @edit="edit($event.id)">
-        <template v-slot:priority="{ row }">
+        <template #priority="{ row }">
             <span class="tag is-table-tag mr-1"
                 :class="enums.emailPriorityLabels._get(row.priority)">
                 {{ enums.emailPriorities._get(row.priority) }}
             </span>
         </template>
-        <template v-slot:status="{ row }">
+        <template #status="{ row }">
             <span class="tag is-table-tag mr-1"
                 :class="enums.emailStatusLabels._get(row.status)">
                 {{ enums.emailStatuses._get(row.status) }}
