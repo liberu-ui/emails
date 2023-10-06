@@ -7,7 +7,7 @@ The component cannot be used outside of the Liberu ecosystem.
 
 Install the package:
 ```
-yarn add @enso-ui/emails
+yarn add @liberu-ui/emails
 ```
 
 ## Contributions

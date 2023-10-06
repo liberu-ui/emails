@@ -104,10 +104,10 @@
 <script>
 
 import { mapState } from 'vuex';
-import { EnsoDatepicker } from '@enso-ui/datepicker/bulma';
-import { EnsoSelect } from '@enso-ui/select/bulma';
-import { Action } from '@enso-ui/forms/bulma';
-import Errors from '@enso-ui/laravel-validation';
+import { EnsoDatepicker } from '@liberu-ui/datepicker/bulma';
+import { EnsoSelect } from '@liberu-ui/select/bulma';
+import { Action } from '@liberu-ui/forms/bulma';
+import Errors from '@liberu-ui/laravel-validation';
 import Recipients from './Recipients.vue';
 import PrioritySelect from './PrioritySelect.vue';
 import SendToSelect from './SendToSelect.vue';

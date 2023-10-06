@@ -18,7 +18,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import Dropdown from '@enso-ui/dropdown/bulma';
+import Dropdown from '@liberu-ui/dropdown/bulma';
 import SendTo from './SendTo.vue';
 
 export default {

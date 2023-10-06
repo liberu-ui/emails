@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/enso-ui/emails.git"
+        "url": "git+https://github.com/liberu-ui/emails.git"
     },
     "keywords": [
         "emails",
@@ -17,9 +17,9 @@
     "author": "Adrian Ocneanu <aocneanu@gmail.com>",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/enso-ui/emails/issues"
+        "url": "https://github.com/liberu-ui/emails/issues"
     },
-    "homepage": "https://github.com/enso-ui/emails#readme",
+    "homepage": "https://github.com/liberu-ui/emails#readme",
     "dependencies": {
         "@liberu-ui/datepicker": "^1.1",
         "@liberu-ui/dropdown": "^2.0",
